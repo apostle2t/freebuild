@@ -1,4 +1,7 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from typing import Annotated
+#from pythonFileStream.dependencies import index
+from ..dependencies import index
 
 router = APIRouter(prefix="/videos", tags=["videos"])
 
@@ -8,6 +11,10 @@ Things to look into later
 2. The way to get the items from the request body 
 """
 
+# print(index.getID())
+# print(index.getID())
+# print(index.getID())
+# print(index.getID())
 
 @router.put("/")
 async def putVideos():
@@ -15,7 +22,7 @@ async def putVideos():
 
 
 @router.get("/")
-async def getVideos():
-    return {"This route is meant for getting the videos"}
+async def getVideos(id: Annotated[int, Depends(index.getID())]):
+    return {id}
 
 
