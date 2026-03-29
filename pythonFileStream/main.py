@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from router import routePics, routeVids
+from pythonFileStream.router import routePics, routeVids
+
 
 app = FastAPI()
 app.include_router(routePics.router)

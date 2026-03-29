@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from typing import Annotated
-#from pythonFileStream.dependencies import index
-from ..dependencies import index
+from pythonFileStream.dependencies import index
+
 
 router = APIRouter(prefix="/videos", tags=["videos"])
 
@@ -22,7 +22,7 @@ async def putVideos():
 
 
 @router.get("/")
-async def getVideos(id: Annotated[int, Depends(index.getID())]):
-    return {id}
+async def getVideos(id: Annotated[int, Depends(index.getID)]):
+    return {"ID": id}
 
 
