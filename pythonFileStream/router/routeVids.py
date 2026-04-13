@@ -23,6 +23,6 @@ async def putVideos():
 
 @router.get("/")
 async def getVideos(id: Annotated[int, Depends(index.getID)]):
-    return {"ID": id}
+    return {"Hello world this is your ID": id}
 
 
