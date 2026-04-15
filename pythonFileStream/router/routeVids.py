@@ -16,8 +16,10 @@ Things to look into later
 # print(index.getID())
 # print(index.getID())
 
-@router.put("/")
-async def putVideos():
+@router.post("/")
+async def postVideos():
+    """
+    """
     return {"This route is meant for sending videos"}
 
 
