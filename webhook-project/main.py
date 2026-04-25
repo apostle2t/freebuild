@@ -12,7 +12,7 @@ html = """
         </head>
         <body>
             <h1>Welcome to Matthew's Chatting application</h1>
-            <h2>Enter an Input to start chatting<h2>
+            <h2>Enter an Input to start chatting.<h2>
             <form action="" onsubmit="connectWebhook(event)">
                 <input type="text" id="inp"/>
                 <button type="submit"/>
